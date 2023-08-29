@@ -6,8 +6,7 @@ from slack.errors import SlackApiError
 
 class SlackBot:
     def __init__(self, token: str):
-        self.token = token
-        self.client = WebClient(token=self.token)
+        self.client = WebClient(token=token)
 
     def post(self, channel: str, message: str) -> None:
         try:
